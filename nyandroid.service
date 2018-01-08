@@ -1,0 +1,13 @@
+[Unit]
+Description = A file for nyandroid.
+After=local-fs.target
+ConditionPathExists=/opt/nyandroid/bin
+
+[Service]
+ExecStart=/opt/nyandroid/bin/autoexec.sh
+Restart=no
+Type=simple
+
+
+[Install]
+WantedBy=multi-user.target
